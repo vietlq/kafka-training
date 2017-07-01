@@ -65,3 +65,7 @@ docker run --rm --it \
            -e ADV_HOST=127.0.0.1 \
            landoop/fast-data-dev
 ```
+
+```
+$ docker run --rm --net=host landoop/fast-data-dev bash
+```
