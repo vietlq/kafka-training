@@ -118,3 +118,5 @@ Use `group.id`:
 ```
 kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy --consumer-property group.id=group1 --from-beginning
 ```
+
+https://kafka.apache.org/documentation/#producerconfigs
