@@ -104,3 +104,17 @@ Topic:dummy    PartitionCount:3    ReplicationFactor:1    Configs:
     Topic: dummy    Partition: 1    Leader: 0    Replicas: 0    Isr: 0
     Topic: dummy    Partition: 2    Leader: 0    Replicas: 0    Isr: 0
 ```
+
+```
+kafka-console-producer --broker-list 127.0.0.1:9092 --topic dummy
+```
+
+```
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy --from-beginning
+```
+
+Use `group.id`:
+
+```
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy --consumer-property group.id=group1 --from-beginning
+```

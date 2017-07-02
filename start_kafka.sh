@@ -10,3 +10,10 @@ docker run --rm -it \
 # kafka-topics --zookeeper 127.0.0.1:2181 --create --topic dummy --partitions 3 --replication-factor 1
 
 kafka-topics --zookeeper 127.0.0.1:2181 --describe --topic dummy
+
+# kafka-console-producer --broker-list 127.0.0.1:9092 --topic dummy
+
+# kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy
+# kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy --from-beginning
+
+# kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy --consumer-property group.id=group1 --from-beginning
