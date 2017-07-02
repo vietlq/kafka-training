@@ -122,3 +122,19 @@ kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic dummy --consume
 https://kafka.apache.org/documentation/#producerconfigs
 
 https://github.com/apache/kafka/tree/trunk/examples
+
+https://www.youtube.com/watch?v=sl2mfyjnkXk&feature=youtu.be
+
+https://www.youtube.com/watch?v=pGYAg7TMmp0
+
+https://www.youtube.com/watch?v=JBtWxj9l7zM
+
+https://www.youtube.com/watch?v=_I94-tJlovg
+
+https://www.youtube.com/watch?v=_f-qkGJBPts
+
+https://www.youtube.com/watch?v=upGiAG7-Sa4
+
+https://www.youtube.com/watch?v=ddhU3NMrhX4
+
+https://www.draw.io/
