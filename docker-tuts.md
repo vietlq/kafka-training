@@ -23,3 +23,11 @@ Now that services have registered, we can discover them and load balance between
 
 High-Availability Docker #5: https://youtu.be/4215szNHlC4
 - Public DNS: Once the app is working, we need a fixed way for the outside world to access it. We'll use Nginx and Confd for this. Confd will watch Etcd for service registration and when services come/go, it will build a new configuration file for Nginx and reload Nginx.
+
+https://www.youtube.com/watch?annotation_id=annotation_42917443&feature=iv&index=3&list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc&src_vid=JBtWxj9l7zM&v=K6WER0oI-qs
+
+https://www.youtube.com/watch?v=YiZkHUbE6N0
+
+https://www.youtube.com/watch?v=zzAdEt3xZ1M
+
+https://www.youtube.com/watch?v=4sBF5Dg8dQ4&index=5&list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc

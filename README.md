@@ -138,3 +138,11 @@ https://www.youtube.com/watch?v=upGiAG7-Sa4
 https://www.youtube.com/watch?v=ddhU3NMrhX4
 
 https://www.draw.io/
+
+https://www.youtube.com/watch?annotation_id=annotation_42917443&feature=iv&index=3&list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc&src_vid=JBtWxj9l7zM&v=K6WER0oI-qs
+
+https://www.youtube.com/watch?v=YiZkHUbE6N0
+
+https://www.youtube.com/watch?v=zzAdEt3xZ1M
+
+https://www.youtube.com/watch?v=4sBF5Dg8dQ4&index=5&list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
