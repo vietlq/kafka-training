@@ -44,6 +44,13 @@ public class KafkaProducerDemo {
             producer.send(producerRecord3);
         }
 
+        for (int key = 0; key < 10; ++key) {
+            ProducerRecord<String, String> producerRecord4 = new ProducerRecord<String, String>(
+                    "dummy", "A message without key: " + Integer.toString(key)
+            );
+            producer.send(producerRecord4);
+        }
+
         // Replaces linger.ms property
         //producer.flush();
         producer.close();
