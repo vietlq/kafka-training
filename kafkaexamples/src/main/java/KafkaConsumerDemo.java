@@ -20,9 +20,12 @@ public class KafkaConsumerDemo {
         properties.setProperty("value.deserializer", StringDeserializer.class.getName());
         // Group ID
         properties.setProperty("group.id", "group1");
-        // True by default
-        properties.setProperty("enable.auto.commit", "true");
-        properties.setProperty("auto.commit.interval.ms", "1000");
+
+        // Autocommit is TRUE by default with Commit Interval = 5000ms
+        //properties.setProperty("enable.auto.commit", "true");
+        //properties.setProperty("auto.commit.interval.ms", "1000");
+        properties.setProperty("enable.auto.commit", "false");
+
         // Offset reset
         properties.setProperty("auto.offset.reset", "earliest");
 
@@ -47,6 +50,9 @@ public class KafkaConsumerDemo {
                         "; Key: " + consumerRecord.key() +
                         "; Value: " + consumerRecord.value());
             }
+
+            // Since autocommit is FALSE, the consumer has to commit explicitly
+            kafkaConsumer.commitSync();
         }
     }
 }
