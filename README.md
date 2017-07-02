@@ -59,7 +59,7 @@ $ docker run --rm --net=host landoop/fast-data-dev
 ```
 
 ```
-docker run --rm --it \
+docker run --rm -it \
            -p 2181:2181 -p 3030:3030 -p 8081:8081 \
            -p 8082:8082 -p 8083:8083 -p 9092:9092 \
            -e ADV_HOST=127.0.0.1 \
@@ -67,5 +67,40 @@ docker run --rm --it \
 ```
 
 ```
-$ docker run --rm --net=host landoop/fast-data-dev bash
+$ docker run --rm -it --net=host landoop/fast-data-dev bash
+```
+
+Create a topic
+
+```
+root@fast-data-dev / $ kafka-topics --zookeeper 127.0.0.1:2181 --create --topic dummy --partitions 3 --replication-factor 3
+Error while executing topic command : replication factor: 3 larger than available brokers: 1
+[2017-07-02 10:10:04,666] ERROR org.apache.kafka.common.errors.InvalidReplicationFactorException: replication factor: 3 larger than available brokers: 1
+ (kafka.admin.TopicCommand$)
+
+root@fast-data-dev / $ kafka-topics --zookeeper 127.0.0.1:2181 --create --topic dummy --partitions 3 --replication-factor 2
+Error while executing topic command : replication factor: 2 larger than available brokers: 1
+[2017-07-02 10:10:12,199] ERROR org.apache.kafka.common.errors.InvalidReplicationFactorException: replication factor: 2 larger than available brokers: 1
+ (kafka.admin.TopicCommand$)
+
+root@fast-data-dev / $ kafka-topics --zookeeper 127.0.0.1:2181 --create --topic dummy --partitions 3 --replication-factor 1
+Created topic "dummy".
+```
+
+```
+root@fast-data-dev / $ kafka-topics --zookeeper 127.0.0.1:2181 --create --topic dummy_two --partitions 3 --replication-factor 1
+WARNING: Due to limitations in metric names, topics with a period ('.') or underscore ('_') could collide. To avoid issues it is best to use either, but not both.
+Created topic "dummy_two".
+
+root@fast-data-dev / $ kafka-topics --zookeeper 127.0.0.1:2181 --delete --topic dummy_two
+Topic dummy_two is marked for deletion.
+Note: This will have no impact if delete.topic.enable is not set to true.
+```
+
+```
+root@fast-data-dev / $ kafka-topics --zookeeper 127.0.0.1:2181 --describe --topic dummy
+Topic:dummy    PartitionCount:3    ReplicationFactor:1    Configs:
+    Topic: dummy    Partition: 0    Leader: 0    Replicas: 0    Isr: 0
+    Topic: dummy    Partition: 1    Leader: 0    Replicas: 0    Isr: 0
+    Topic: dummy    Partition: 2    Leader: 0    Replicas: 0    Isr: 0
 ```
