@@ -7,7 +7,7 @@ import java.util.Properties;
 /**
  * Created by vietlq on 02/07/2017.
  */
-public class KafkaProducer {
+public class KafkaProducerDemo {
     public static void main(String[] args) {
         Properties properties = new Properties();
 
